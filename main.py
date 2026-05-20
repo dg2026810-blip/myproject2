@@ -18,5 +18,4 @@ helix(pos=vec(0, 0, 0), axis=vec(20, 0, 0), color=color.red)
 
 sphere(pos=vector(-2,0,0),radius=1, color=color.red, opacity=0.5)
 
-label(text='',pos = vec(100,100,0))
-
+label(text='아자스',pos = vec(100,100,0))
