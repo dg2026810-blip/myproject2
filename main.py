@@ -17,11 +17,20 @@ sphere(pos = vec(0,0.4,1) * SIZE, color = color.black, radius = 0.05 * SIZE)
 sphere(pos = vec(0.3,0.5,0.8) * SIZE, color = color.black, radius = 0.1 * (SIZE * 0.24))
 sphere(pos = vec(-0.3,0.5,0.8) * SIZE, color = color.black, radius = 0.1 * (SIZE * 0.24))
 
-# 춘식이의 세포막 (전체 크기에 맞춰 위치와 반지름 확대)
+# 춘식이의 말 
+label(text='아자스', pos = vec(1,1,0) * SIZE, height = 20)
+
+# 춘식이의 세포막
 sphere(pos = vec(0,0,0) * SIZE, color = color.green, radius = 0.3 * SIZE, opacity=0.5)
 
-# 춘식이의 작은세포 (전체 크기에 맞춰 위치와 반지름 확대)
+# 춘식이의 작은세포 
 sphere(pos = vec(-2,0,0) * (SIZE/10), radius = 0.01 * SIZE, color=color.red, opacity=0.5)
 
-# 춘식이의 말 (글자 크기와 배치 위치 확대)
-label(text='아자스', pos = vec(1,1,0) * SIZE, height = 20)
+# 춘식이의 작은세포 
+sphere(pos = vec(-2,0,0) * (SIZE/10), radius = 0.01 * SIZE, color=color.red, opacity=0.5)
+
+#춘식이의단백질
+curve(pos=[vec(- 1, 3, 0),vec(0,0,0),vec(8,4,0),vec(3,1,0),vec(-1,0,-5),vec(4,-4,0),vec(0,-3,0),vec(1,4,6),vec(3,6,-6),vec(4,4,0), vec(2, 0, - 1)], color=color.yellow)
+
+#춘식이의미토콘드리아
+ring(pos=vec(47, 6, 20), axis=vec(1, 6, 0), size=vec(0.1, 8, 4), color=color.cyan)
