@@ -54,15 +54,16 @@ DNA 구조가 나타나는 것
 세포에에 속해있는 골지체를 만들었다 
 
 #춘식이의골지체
-w = ribbon_shape = shapes.rectangle(width=2, height=0.1)
-ribbon_path = []
-steps = 200
-for i in range(steps):
-    x = float(i) / 10
-    y = 2.5 * sin(1.5 * x)
-    z = 0
-    ribbon_path.append(vec(x, y, z))
-strip = extrusion(path=ribbon_path, shape=ribbon_shape, color=vec(0.55, 0.27, 0.07))
+w = ribbon_shape = shapes.rectangle(width=2, height=0.1) 2D 도형 라이브러리 중 하나로, 사각형 모양의 데이터 포인트를 생성 (width=2: 사각형의 가로 길이(폭)를 2로 설정합니다 height=0.1: 사각형의 세로 길이(높이)를 0.1로 설정) 
+ribbon_path = []  비어 있는 리스트를 ribbon_path라는 변수에 저장, 앞으로 이 변수에 값을 하나씩 채워 넣겠다는 선언과 같다
+steps = 200 (리본을 구성할 점(좌표)의 총개수를 200개로 설정합니다. 점이 많을수록 리본의 곡선이 부드러워짐)
+for i in range(steps): (i 값을 0부터 199까지 1씩 증가시키며 총 200번 아래 코드들을 반복 실행)
+    x = float(i) / 10 
+    y = 2.5 * sin(1.5 * x) 
+    z = 0x  (좌표: i가 0부터 199까지 변할 때, x는 0.0부터 19.9까지 0.1 간격으로 부드럽게 증가합니다. 리본의 가로 길이가 됩니다.y 좌표: 사인 함수(sin)를 사용해 x 값에 따라 위아래로 출렁이는 높이를 계산합니다. 2.5를 곱해 위아래 진폭을 키웠고, 1.5를 곱해 물결을 더 촘촘하게 만들었습니다.z 좌표: 0으로 고정되어 있으므로, 리본이 앞뒤로 휘지 않고 2D 평면 안에서만 위아래로 움직여)
+    ribbon_path.append(vec(x, y, z)) (계산된 (x, y, z) 위치를 VPython의 3D 벡터 구조인 vec(x, y, z)로 변환하여 ribbon_path 리스트에 하나씩 집어넣고 이 작업이 끝나면 리스트에는 200개의 좌표 데이터가 쌓여)
+strip = extrusion(path=ribbon_path, shape=ribbon_shape, color=vec(0.55, 0.27, 0.07)): (extrusion(...): 모아진 경로를 따라 단면을 쭉 늘려 3D 입체를 만듭니다.path=ribbon_path: 방금 반복문으로 만든 사인파 모양의 200개 좌표 경로를 따라갑니다.shape=ribbon_shape: 첫 번째 질문에서 만든 가로 2, 세로 0.1짜리 납작한 사각형 단면을 사용합니다.color=vec(0.55, 0.27, 0.07): RGB 비율을 설정한 것으로, 화면에는 갈색(Brown) 계열의 리본이 생성)  
+<--- 이 코드 요약 X축 방향으로 2.5 높이만큼 출렁이며 길게 뻗어나가는 갈색 물결 리본이 3D 화면에 완성된다
 선생님의 조언으로 세포들이 다 말을 할 수 있었다
 세포마다 라벨을 붙여줬다
 
