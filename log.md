@@ -45,6 +45,17 @@ DNA 구조가 나타나는 것
 미토콘드리아를 추가로 만들었다 
 
 세포에에 속해있는 골지체를 만들었다 
+
+#춘식이의골지체
+w = ribbon_shape = shapes.rectangle(width=2, height=0.1)
+ribbon_path = []
+steps = 200
+for i in range(steps):
+    x = float(i) / 10
+    y = 2.5 * sin(1.5 * x)
+    z = 0
+    ribbon_path.append(vec(x, y, z))
+strip = extrusion(path=ribbon_path, shape=ribbon_shape, color=vec(0.55, 0.27, 0.07))
 선생님의 조언으로 세포들이 다 말을 할 수 있었다
 세포마다 라벨을 붙여줬다
 
