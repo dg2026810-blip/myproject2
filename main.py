@@ -42,12 +42,3 @@ s=box(pos=vector(0, 20, 35),
     size=vector(10, 0.5, 10), 
     color=vec(0.55, 0.27, 0.07)) 
 label(text = 'im gouljicha', pos = s.pos + vec(0,10,0))
-    
-#탈출핵
-ball = sphere(pos = vec(0,0,0) * (SIZE/100), radius = 0.01 * SIZE, color=color.red, opacity=0.5)
-ball_list = [ball]
-ball.velocity = vec(1, 0, 0)
-while True:
-    rate(60)
-    for b in ball_list:
-        b.pos = b.pos + b.velocity * 0.1
