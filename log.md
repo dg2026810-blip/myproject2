@@ -40,5 +40,6 @@ strip = extrusion(path=ribbon_path, shape=ribbon_shape, color=vec(0.55, 0.27, 0.
 curve(pos=[vec(- 10, 30, 20),vec(20,30,30),vec(10,-30,10),vec(-30,10,40),vec(-10,40,-50),vec(40,-40,-20),vec(40,-30,10),vec(10,40,-20),vec(-30,30,-20),vec(20,-20,-20), vec(20, 10, - 10)], color=color.yellow)
 설명: 3차원 공간에 **11개의 점을 차례대로 연결하는 노란색 곡선 
 
-
+탈출핵
+핵(구)를 x축으로 1만큼 천천히 탈출시키는 코드를 리스트를 넣어 만들었다.
 
