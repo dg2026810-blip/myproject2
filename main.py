@@ -38,9 +38,10 @@ q = ring(pos=vec(47, 6, 20), axis=vec(1, 6, 0), size=vec(0.1, 8, 4), color=color
 label(text = 'im mitocondria', pos = q.pos + vec(0,10,0))
 
 #춘식이의골지체
-box(pos=vector(0, 20, 35),
+s=box(pos=vector(0, 20, 35),
     size=vector(10, 0.5, 10), 
     color=vec(0.55, 0.27, 0.07)) 
+label(text = 'im gouljicha', pos = s.pos + vec(0,10,0))
     
 #탈출핵
 ball = sphere(pos = vec(0,0,0) * (SIZE/100), radius = 0.01 * SIZE, color=color.red, opacity=0.5)
