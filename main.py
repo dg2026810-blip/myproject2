@@ -38,15 +38,15 @@ q = ring(pos=vec(47, 6, 20), axis=vec(1, 6, 0), size=vec(0.1, 8, 4), color=color
 label(text = 'im mitocondria', pos = q.pos + vec(0,10,0))
 
 #춘식이의골지체
-w = ribbon_shape = shapes.rectangle(width=2, height=0.1)
-ribbon_path = []
-steps = 200
-for i in range(steps):
-    x = float(i) / 10
-    y = 2.5 * sin(1.5 * x)
-    z = 0
-    ribbon_path.append(vec(x, y, z))
-strip = extrusion(path=ribbon_path, shape=ribbon_shape, color=vec(0.55, 0.27, 0.07))
-strip.pos = vec(0, 20, 35)
-label(text = 'im hack', pos = w.pos + vec(0,10,0))
-
+box(pos=vector(0, 20, 35),
+    size=vector(10, 0.5, 10), 
+    color=vec(0.55, 0.27, 0.07)) 
+    
+#탈출핵
+ball = sphere(pos = vec(0,0,0) * (SIZE/100), radius = 0.01 * SIZE, color=color.red, opacity=0.5)
+ball_list = [ball]
+ball.velocity = vec(1, 0, 0)
+while True:
+    rate(60)
+    for b in ball_list:
+        b.pos = b.pos + b.velocity * 0.1
