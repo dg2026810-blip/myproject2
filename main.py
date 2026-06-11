@@ -42,3 +42,16 @@ s=box(pos=vector(0, 20, 35),
     size=vector(10, 0.5, 10), 
     color=vec(0.55, 0.27, 0.07)) 
 label(text = 'im gouljicha', pos = s.pos + vec(0,10,0))
+
+b=box()
+while True:
+    rate(100)
+    k=keysdown()
+    if 'left' in k:
+        b.pos.x=b.pos.x-1
+    if 'right' in k:
+        b.pos.x=b.pos.x+1
+    if 'up' in k:
+        b.pos.y=b.pos.y+1
+    if 'down' in k:
+        b.pos.y=b.pos.y-1
