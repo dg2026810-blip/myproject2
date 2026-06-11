@@ -49,4 +49,4 @@ label(text = 'im mitocondria', pos = q.pos + vec(0,10,0))
 외막 내부에 작은 상자(box)나 곡선(curve)들을 겹쳐 넣어 내막(크리스태) 구조 표현하기
 
 
-
+작은 하얀 세포가 움직이게 하였다
